@@ -1,0 +1,15 @@
+Before sending requesting from client's terminal, kindly compile and run the server code.
+COMPILE : gcc Server.c csapp.c -o out.o -pthread
+RUN : ./out.o 8888
+
+To request from clients side, use curl command in the format given below : 
+FORMAT :  curl 'http://127.0.0.1:8888/<first_name> <Quantity> <Category> <Email_ID>'
+Example : curl 'http://127.0.0.1:8888/Kartik 7 Deluxe shenmar.kartik@gmail.com'
+
+INFORMATION REGARDING EMAIL SENDING FUNCTIONALITY :
+Email functionality has been implemented using command : sendmail <email_id> 
+For successful implementation, postfix has been configured first so as to send emails.
+So kindly install smtp and postfix before running the code provided.
+
+OUTPUT RELATED INFORMATION : 
+Output is displayed on the server's terminal and in the case of successfull booking, confirmation mail is sent to the client's written email id.  
